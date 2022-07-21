@@ -1,8 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const path = require("path");
-const generateMarkdown = require("./assets/generateMarkdown.md");
+const generateReadMe = require("./utils/generateReadMe");
 console.log(process.argv);
 
 // TODO: Create an array of questions for user input
@@ -60,13 +59,20 @@ function writeToFile(fileName, data) {
     if (err) {
       console.error(err);
     } else {
-      console.log("YAY! You have now created your high-quality ReadMe file :)");
+      console.log("YAY! You have now created your high-quality README file :)");
     }
   });
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+const inquirerAnswers = inquirer.prompt(questions);
+
+function init() {
+  inquirerAnswers.then((data) => {
+    console.log("Generating README file ...");
+    writeToFile("README.md", generateReadMe(data));
+  });
+}
 
 // Function call to initialize app
 init();
