@@ -1,37 +1,30 @@
-// Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (license !== "None") {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+const { title } = require("process");
+
+// TODO: Create function that will render license badge
+function licenseBadge(license) {
+  switch (license) {
+    case "MIT":
+      return "![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
+
+    case "Apache":
+      return "![Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)";
+
+    case "GPL":
+      return "![GPL](https://img.shields.io/badge/License-GPLv3-blue.svg)";
+
+    case "BSD 3-Clause":
+      return "![BSD](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)";
+
+    case "None":
+      return "";
   }
-  return "";
 }
 
-// Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license !== "None") {
-    return `\n* [License](#license)\n`;
-  }
-  return "";
-}
-
-// Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license !== "None") {
-    return `## License
-
-This project is licensed under the ${license} license.`;
-  }
-  return "";
-}
-
-// Create a function to generate markdown for README
+// TODO: Create a function to generate markdown for README
 function generateReadMe(data) {
   return `# ${data.title}
-${renderLicenseBadge(data.license)}
-
+  ${licenseBadge(data.license)}
+  
 ## Description
 
 ${data.description}
@@ -41,7 +34,7 @@ ${data.description}
 * [Installation](#installation)
 
 * [Usage](#usage)
-${renderLicenseLink(data.license)}
+
 * [Contributing](#contributing)
 
 * [Tests](#tests)
@@ -50,35 +43,29 @@ ${renderLicenseLink(data.license)}
 
 ## Installation
 
-To install necessary dependencies, run the following command:
-
-\`\`\`
-${data.installation}
-\`\`\`
+To install, run \`\`\`${data.install}\`\`\` in the command line. 
 
 ## Usage
 
 ${data.usage}
-
-${renderLicenseSection(data.license)}
   
 ## Contributing
 
-${data.contributing}
+Special thanks to: ${data.contributors}
 
 ## Tests
 
-To run tests, run the following command:
+${data.tests}
 
-\`\`\`
-${data.test}
-\`\`\`
+
+## License
+
+This README file is licensed with ${data.license}
+
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at ${
-    data.email
-  }. You can find more of my work at [${data.github}](https://github.com/${
+ You can find more of my work at [${data.github}](https://github.com/${
     data.github
   }/).
 

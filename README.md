@@ -1,53 +1,47 @@
-# a
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# Mental Health App
+
+![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 
-a
+This application will provide coping mechanisms so users can implement them during anxiety-triggering situations
 
-## Table of Contents 
+## Table of Contents
 
-* [Installation](#installation)
+- [Installation](#installation)
 
-* [Usage](#usage)
+- [Usage](#usage)
 
-* [License](#license)
+- [Contributing](#contributing)
 
-* [Contributing](#contributing)
+- [Tests](#tests)
 
-* [Tests](#tests)
-
-* [Questions](#questions)
+- [Questions](#questions)
 
 ## Installation
 
-To install necessary dependencies, run the following command:
-
-```
-undefined
-```
+To install, run `node index.js` in the command line.
 
 ## Usage
 
-a
+Use this demo video to create your own ReadMe file
 
-## License
-
-This project is licensed under the MIT license.
-  
 ## Contributing
 
-undefined
+Special thanks to: me
 
 ## Tests
 
-To run tests, run the following command:
+none
 
-```
-undefined
-```
+## Demo Video
+
+https://drive.google.com/file/d/1Qw-7UxRQFoS-E1JFUnlYHLEfJaPO0TtP/view
+
+## License
+
+This README file is licensed with MIT
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at undefined. You can find more of my work at [https://github.com/a](https://github.com/https://github.com/a/).
-
+You can find more of my work at [https://github.com/catcueto](https://github.com/https://github.com/catcueto/).
